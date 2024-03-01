@@ -7,8 +7,9 @@ My process:
 I am sshing with ubuntu-server-keypair.pem, this information is added to the included Ansible inventory file (hosts)
 
 The playbook yaml then 
-- Removes the chronyd service if it's installed.
-- Removes the ntpd service if it's installed.
-- Installs the systemd-timesyncd service.
-- Configures the systemd-timesyncd via template.
-- Enables and starts the systemd-timesyncd service.
+- [X] Removes the chronyd service if it's installed.
+- [X] Removes the ntpd service if it's installed.
+- [ ] Installs the systemd-timesyncd service.
+- [ ] Configures the systemd-timesyncd via template.
+- [ ] Enables and starts the systemd-timesyncd service.
+
