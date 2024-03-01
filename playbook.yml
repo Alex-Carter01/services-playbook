@@ -1,0 +1,14 @@
+---
+- name: Ensure chronyd and ntpd are not installed
+  hosts: my_ec2_instance
+  become: yes  # This is required to gain root privileges
+  tasks:
+    - name: Remove chronyd if installed
+      ansible.builtin.package:
+        name: chrony
+        state: absent
+
+    - name: Remove ntp if installed
+      ansible.builtin.package:
+        name: ntp
+        state: absent
